@@ -51,6 +51,7 @@ int main(int argc, char* argv[]) {
 	if (argc != 3) { printf("Usage: ./hack_me [username] [password]\n"); return 1; }
 	int username = 206654675;
 	int password = nondet_int();
+	__CPROVER_assume (password != 13);
 	int verification_answer = verify(username, password);
 	if (verification_answer) {
 		printf("Access granted!\n");
