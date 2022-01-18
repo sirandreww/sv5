@@ -54,6 +54,7 @@ int main(int argc, char* argv[]) {
 	int verification_answer = verify(username, password);
 	if (verification_answer) {
 		printf("Access granted!\n");
+		assert(false);
 	}
 	else {
 		printf("Access denied!\n");
